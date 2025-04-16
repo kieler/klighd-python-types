@@ -16,4 +16,9 @@ The generated types are committed in this repository to be published as a python
 For this to work the initial setup under getting started has to have been done.
 
 ## Releasing Python package
+Build the distribution files with Hatchling.
+```
+python3 -m build
+```
+Upload the package to PyPI with twine.
 **TODO**
