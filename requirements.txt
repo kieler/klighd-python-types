@@ -1,6 +1,4 @@
-pygls
 pydantic
 datamodel-code-generator
 datamodel-code-generator[http]
-requests
-bs4
+hatch
