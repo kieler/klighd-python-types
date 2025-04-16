@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "kieler-klighd-types"
-dynamic = ["version"]
+version = "0.0.1"
 description = 'Types for creating language servers that can speak with klighd clients.'
 readme = "README.md"
 requires-python = ">=3.8"
@@ -31,31 +31,5 @@ dependencies = ["pydantic"]
 Homepage = "https://github.com/kieler/kieler-klighd-types"
 Issues = "https://github.com/kieler/kieler-klighd-types/issues"
 
-[tool.hatch.version]
-path = "src/kieler_klighd_types/__about__.py"
-
-[tool.hatch.envs.types]
-extra-dependencies = [
-  "mypy>=1.0.0",
-]
-[tool.hatch.envs.types.scripts]
-check = "mypy --install-types --non-interactive {args:src/kieler_klighd_types tests}"
-
-[tool.coverage.run]
-source_pkgs = ["kieler_klighd_types", "tests"]
-branch = true
-parallel = true
-omit = [
-  "src/kieler_klighd_types/__about__.py",
-]
-
-[tool.coverage.paths]
-kieler_klighd_types = ["src/kieler_klighd_types", "*/kieler-klighd-types/src/kieler_klighd_types"]
-tests = ["tests", "*/kieler-klighd-types/tests"]
-
-[tool.coverage.report]
-exclude_lines = [
-  "no cov",
-  "if __name__ == .__main__.:",
-  "if TYPE_CHECKING:",
-]
+[tool.hatch.build.targets.wheel]
+packages = ["src/kieler_klighd_types"]
