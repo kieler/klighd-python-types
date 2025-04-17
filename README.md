@@ -18,7 +18,9 @@ For this to work the initial setup under getting started has to have been done.
 ## Releasing Python package
 
 ### Automatic Build and Release with Github Workflow
-**TODO**
+To publish a new release, when [klighd](https://github.com/kieler/klighd-vscode) has made modifications to the schema for example, use the [rebuild-and-publish workflow](https://github.com/kieler/klighd-python-types/actions/workflows/rebuild-and-publish.yml).
+Select the type of release (major/minor/patch) and run the workflow.
+It will automatically handle everything.
 
 ### Manual Release Process
 Update the version number using hatch.
