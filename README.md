@@ -3,7 +3,7 @@ This project holds automatically generated types that can be used to implement l
 
 ## Getting Started
 Setup a virtual environment and install the required packages.
-```
+```sh
 python -m venv ls-env
 source ls-env/bin/activate
 pip install -r requirements.txt
@@ -16,9 +16,20 @@ The generated types are committed in this repository to be published as a python
 For this to work the initial setup under getting started has to have been done.
 
 ## Releasing Python package
-Build the distribution files with Hatchling.
+
+### Automatic Build and Release with Github Workflow
+**TODO**
+
+### Manual Release Process
+Update the version number using hatch.
+```sh
+hatch version major/minor/patch
 ```
+Build the distribution files with Hatchling.
+```sh
 python3 -m build
 ```
 Upload the package to PyPI with twine.
-**TODO**
+```sh
+python -m twine upload --repository pypi dist/*
+```

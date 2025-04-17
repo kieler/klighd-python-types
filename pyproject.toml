@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "kieler-klighd-types"
-version = "0.0.1"
+dynamic = ["version"]
 description = 'Types for creating language servers that can speak with klighd clients.'
 readme = "README.md"
 requires-python = ">=3.8"
@@ -33,3 +33,6 @@ Issues = "https://github.com/kieler/kieler-klighd-types/issues"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/kieler_klighd_types"]
+
+[tool.hatch.version]
+path = "src/kieler_klighd_types/__about__.py"
