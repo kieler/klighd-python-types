@@ -1,5 +1,5 @@
 # KLighD Python Types
-This project holds automatically generated types that can be used to implement language servers that can speak the language server protocol variant understood by [klighd](https://github.com/kieler/klighd-vscode).
+This project holds automatically generated types that can be used to implement language servers that can speak the language server protocol variant understood by [klighd](https://github.com/kieler/klighd-vscode). A very simple example of a python language server using this library is the [plyghd-ls-demonstrator](https://github.com/kieler/plyghd-ls-demonstrator)
 
 ## Getting Started
 Setup a virtual environment and install the required packages.
